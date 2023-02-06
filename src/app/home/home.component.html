@@ -1,0 +1,18 @@
+<h1>PokeDex</h1>
+<app-table-header [(searchName)]="searchName"></app-table-header>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let pokemon of $pokemonList | async | search: searchName; let i = index">
+            <td>{{i + 1}}</td>
+            <td><a class="link-primary" (click)="routeToPokemon(pokemon.url)">{{pokemon.name}}</a></td>
+        </tr>
+    </tbody>
+</table>
+
+

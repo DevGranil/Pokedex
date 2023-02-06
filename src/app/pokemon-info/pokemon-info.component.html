@@ -1,0 +1,21 @@
+
+<a [routerLink]="['/']">Back to Search</a>
+<br>
+<br>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Stat</th>
+            <th scope="col">Effort</th>
+        </tr>
+    </thead>
+    <tbody *ngIf="$pokemon | async as pokemon">
+        <tr *ngFor="let stat of pokemon.stats">
+            <td>{{stat.stat.name}}</td>
+            <td>{{stat.base_stat}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<h5 *ngIf="error">Pokemon not found in PokeDex</h5>
+
