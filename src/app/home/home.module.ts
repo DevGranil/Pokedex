@@ -1,8 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home.component';
-import { SearchComponent } from './search/search.component';
-import { FiltersComponent } from './filters/filters.component';
 import { RouterModule, Routes } from '@angular/router';
 import { TableHeaderComponent } from './table-header/table-header.component';
 import { FormsModule } from '@angular/forms';
@@ -18,8 +16,6 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     HomeComponent, 
-    SearchComponent, 
-    FiltersComponent, 
     TableHeaderComponent,
     SearchPipe
   ],
