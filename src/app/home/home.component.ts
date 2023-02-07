@@ -27,7 +27,7 @@ export class HomeComponent implements OnInit {
   }
 
   routeToPokemon = (url : string) => {
-    const id = url.charAt(url.length - 2)
+    const id = url.split('/')[6]
     this.router.navigate([id])
 
   }
